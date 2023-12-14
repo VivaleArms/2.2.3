@@ -24,7 +24,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void removeUserById(int id) {
-        manager.remove(getUser(id));
+        manager.createQuery("delete from User user WHERE user.id =:id")
+                .setParameter("id", id).executeUpdate();
     }
 
     @Override

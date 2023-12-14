@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Create new User</title>
+  <title>Create New User</title>
 </head>
 <body>
 <form th:method="POST" th:action="@{/users}" th:object="${user}">
@@ -22,7 +22,7 @@
   <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</div>
   <br/>
 
-  <input type="submit" value="Create!">
+  <input type="submit" value="Create">
 </form>
 
 </body>
